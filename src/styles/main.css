@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #caccce;
+  font-family: "Nunito", sans-serif;
+}
+
+.app-bar {
+  padding: 12px 10%;
+  color: white;
+  background-color: #17223b;
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  box-shadow: -4px -3px 45px 21px rgba(15, 6, 6, 0.35);
+}
+#drawer {
+  padding: 4px 0;
+}
+#drawer ul li {
+  display: inline;
+  margin: 0 5px;
+}
+
+#drawer li a {
+  color: white;
+  text-decoration-line: none;
+}
+#hamburger {
+  font-size: 20px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  display: none;
+}
+div#jumbotron {
+  margin-top: 0;
+  /* width: 100%; */
+  background-color: rgb(163, 190, 167);
+  height: 420px;
+  background-image: url("../public/images/hero-image_2.jpg");
+  /* background-position: center; */
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+main {
+  padding: 0 10%;
+}
+main h2 {
+  padding: 20px 10vh;
+  text-align: center;
+  font-weight: bold;
+}
+/* menggunakna flex / grip () */
+/* ketika grid ditetapkan pada wrapper atau container,
+seluruh elemen yang berada di dalamnya secara langsung
+merupakan grid item. Namun, kita tidak melihat perubahannya
+karena kita belum mengatur akan seperti apa grid item ditampilkan. */
+
+*.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 15px;
+}
+/* //item */
+*.wrapper .card {
+  box-shadow: 0 8px 10px 0px rgba(63, 62, 62, 0.2);
+}
+main div.card.menu-content {
+  border: 1px solid rgb(255, 255, 255);
+  background-color: "yellow";
+  border-radius: 5px;
+  position: relative;
+}
+div.card .card-body {
+  padding: 0 10px;
+  background-color: white;
+}
+div.card img {
+  width: 100%;
+  height: 250px;
+}
+div.card h5 {
+  font-weight: bold;
+  font-size: 20px;
+  margin: 8px 0;
+}
+div.card p {
+  text-align: justify;
+  padding-bottom: 8px;
+}
+div.card .ribbon {
+  color: #fff;
+  position: absolute;
+  background-color: rgb(10, 129, 177);
+  padding: 5px 6px;
+  font-size: 16px;
+  top: 10px;
+  left: 4px;
+  border-radius: 5px;
+}
+div.card .rating {
+  border-radius: 5px;
+  border: none;
+  background-color: #1597bb;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 3px;
+  color: #fff;
+}
+
+footer {
+  margin-top: 40vh;
+  padding: 18px 0;
+  color: white;
+  display: flex;
+  background-color: #17223b;
+  justify-content: center;
+}
+
+@media screen and (max-width: 700px) {
+  body {
+    background-color: rgb(132, 136, 168);
+  }
+  .app-bar {
+    padding: 12px 1%;
+  }
+  main {
+    padding: 0 4px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    background-color: rgb(155, 30, 30);
+  }
+  main {
+    padding: 0 4px;
+  }
+  #drawer {
+    width: 120px;
+    height: 100px;
+    position: absolute;
+    /* top: 55px;
+    right: 4px; */
+    /* menyembunyikan #drawer -250px (sesuai dengan ukuran lebar drawer) ke kiri */
+    transform: translate(500px, 0px);
+    /* transition: transform 0.9s ease-in-out; */
+    transition: transform 0.9s ease-in-out;
+    background-color: rgb(255, 255, 255);
+    display: block;
+    border-radius: 5px;
+  }
+  #drawer ul li {
+    display: block;
+    margin: 8px 16px 0;
+  }
+  #drawer li a {
+    color: black;
+  }
+  #drawer.open {
+    transform: translate(0, 0);
+  }
+  #hamburger {
+    display: inline;
+  }
+}

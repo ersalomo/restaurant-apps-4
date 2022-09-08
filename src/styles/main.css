@@ -69,17 +69,18 @@ karena kita belum mengatur akan seperti apa grid item ditampilkan. */
   grid-template-rows: repeat(3, 1fr);
   gap: 15px;
 }
-/* //item */
+/* item */
 *.wrapper .card {
   box-shadow: 0 8px 10px 0px rgba(63, 62, 62, 0.2);
 }
-main div.card.menu-content {
+div.card.menu-content {
   border: 1px solid rgb(255, 255, 255);
   background-color: "yellow";
   border-radius: 5px;
   position: relative;
 }
 div.card .card-body {
+  margin-top: -15px;
   padding: 0 10px;
   background-color: white;
 }
@@ -113,7 +114,7 @@ div.card .rating {
   font-size: 15px;
   font-weight: bold;
   padding: 3px;
-  color: #fff;
+  color: rgb(233, 233, 233);
 }
 
 footer {
@@ -151,11 +152,11 @@ footer {
     /* top: 55px;
     right: 4px; */
     /* menyembunyikan #drawer -250px (sesuai dengan ukuran lebar drawer) ke kiri */
-    transform: translate(500px, 0px);
+    transform: translate(-350px, 0px);
     /* transition: transform 0.9s ease-in-out; */
     transition: transform 0.9s ease-in-out;
     background-color: rgb(255, 255, 255);
-    display: block;
+    /* display: block; */
     border-radius: 5px;
   }
   #drawer ul li {
@@ -170,5 +171,43 @@ footer {
   }
   #hamburger {
     display: inline;
+  }
+  div#jumbotron {
+    height: 250px;
+  }
+  *.wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+  }
+  div.card.menu-content {
+    border: 1px solid rgb(255, 255, 255);
+    background-color: "yellow";
+    border-radius: 5px;
+    position: relative;
+  }
+  /* div.card .card-body {
+    margin-top: -15px;
+    padding: 0 10px;
+    background-color: white;
+  } */
+  div.card img {
+    width: 100%;
+    height: 250px;
+  }
+  div.card h5 {
+    font-size: 16px;
+  }
+  div.card p {
+    font-size: 13px;
+  }
+  div.card .ribbon {
+    width: 4rem;
+    padding: 4px 3px;
+    font-size: 14px;
+    text-align: center;
+  }
+  div.card .rating {
+    font-size: 12px;
   }
 }

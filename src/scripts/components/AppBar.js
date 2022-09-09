@@ -16,7 +16,7 @@ class AppBar extends HTMLElement {
           </ul>
         </nav>
         <a id="hamburger" href="#">☰</a>
-      </div>
+    </div>
     `;
   }
 }

@@ -1,6 +1,6 @@
 // import "regenerator-runtime"; /* for async await transpile */
-// import "../styles/main.css";
-import data from "../DATA.json" assert { type: "json" };
+import "../styles/main.css";
+import data from "../DATA.json";
 import "./components/AppBar.js";
 import "./components/ListItem.js";
 

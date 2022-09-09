@@ -1,4 +1,3 @@
-// cros // harus menggunakn domain yang sama / using http-server
 import "./ItemRestaurant.js";
 
 class ListItem extends HTMLElement {

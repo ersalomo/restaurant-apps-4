@@ -12,7 +12,7 @@ class AppBar extends HTMLElement {
           <ul class="list-menu">
             <li class="list-item"><a href="#">Home</a></li>
             <li class="list-item"><a href="#content">Favorite</a></li>
-            <li class="list-item"><a href="${AppBar.githubAccount}">About Us</a></li>
+            <li class="list-item"><a href="${AppBar.githubAccount}">About us</a></li>
           </ul>
         </nav>
         <a id="hamburger" href="#">☰</a>

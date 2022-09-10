@@ -5,6 +5,7 @@
   margin: 0;
   box-sizing: border-box;
 }
+
 .skip-link {
   position: absolute;
   top: -40px;
@@ -45,6 +46,15 @@ body {
   color: white;
   font-size: 17px;
   text-decoration-line: none;
+}
+
+#drawer li a:hover {
+  background-color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 4px 0px;
+  font-weight: bold;
+  color: black;
 }
 #hamburger {
   font-size: 20px;
@@ -110,6 +120,7 @@ div.card p {
   padding-bottom: 8px;
   text-indent: 12px;
 }
+
 div.card .ribbon {
   color: #fff;
   position: absolute;
@@ -120,6 +131,7 @@ div.card .ribbon {
   left: 4px;
   border-radius: 5px;
 }
+
 div.card .rating {
   border-radius: 5px;
   border: none;
@@ -146,6 +158,9 @@ footer {
   main {
     padding: 0 2%;
   }
+  div.card img {
+    height: 200px;
+  }
   /* div.card p {
     white-space: nowrap;
     overflow: hidden;
@@ -164,6 +179,12 @@ footer {
   main {
     padding: 0 4px;
   }
+
+  #drawer li a {
+    color: white;
+    font-size: 15px;
+  }
+
   *.wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -177,14 +198,9 @@ footer {
   }
   div.card h5 {
     font-size: 16px;
-    font-weight: bold;
   }
   div.card p {
-    /* white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 10rem;
-    max-height: 2rem; */
+    font-size: 14px;
   }
 }
 
@@ -202,18 +218,17 @@ footer {
     width: 120px;
     height: 100px;
     position: absolute;
-    /* top: 55px;
-    right: 4px; */
+    top: 53px;
+    right: 1px;
+
     /* menyembunyikan #drawer -250px (sesuai dengan ukuran lebar drawer) ke kiri */
-    transform: translate(-350px, 0px);
-    /* transition: transform 0.9s ease-in-out; */
+    transform: translate(130px, 0);
     transition: transform 0.9s ease-in-out;
     background-color: rgb(255, 255, 255);
-    /* display: block; */
     border-radius: 5px;
+    display: none;
   }
   #drawer ul li {
-    display: block;
     margin: 8px 16px 0;
   }
   #drawer li a {
@@ -229,23 +244,18 @@ footer {
     height: 250px;
   }
   *.wrapper {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 200px);
     grid-template-rows: repeat(4, 1fr);
-    gap: 10px;
+    justify-content: center;
+    gap: 12px;
   }
   div.card.menu-content {
     border: 1px solid rgb(255, 255, 255);
-    background-color: "yellow";
     border-radius: 5px;
     position: relative;
   }
-  /* div.card .card-body {
-    margin-top: -15px;
-    padding: 0 10px;
-    background-color: white;
-  } */
   div.card img {
-    height: 150px;
+    height: 120px;
   }
   div.card h5 {
     font-size: 16px;
@@ -253,12 +263,14 @@ footer {
   div.card p {
     font-size: 13px;
   }
+
   div.card .ribbon {
     width: 4rem;
     padding: 4px 3px;
     font-size: 14px;
     text-align: center;
   }
+
   div.card .rating {
     font-size: 12px;
   }

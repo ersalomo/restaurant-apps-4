@@ -10,12 +10,18 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "",
-    ""
+    "Be FrontEnd Expert",
+    "FrontEnd",
+    "The Movie DB",
+    "NodeJS",
+    "webpack",
+    "JavaScript",
+    "PWA's"
   ],
   "author": "Ersalomo",
   "license": "ISC",
   "dependencies": {
+    "idb": "^7.0.2",
     "webpack": "^5.74.0"
   },
   "devDependencies": {

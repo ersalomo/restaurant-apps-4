@@ -1,10 +1,10 @@
 class AppBar extends HTMLElement {
-  static githubAccount = "https://github.com/ersalomo";
+  static githubAccount = 'https://github.com/ersalomo';
   connectedCallback() {
     this.render();
   }
   render() {
-    this.innerHTML = "";
+    this.innerHTML = '';
     this.innerHTML = `
     <div class="app-bar">
         <h2>Hunger Apps</h2>
@@ -20,5 +20,4 @@ class AppBar extends HTMLElement {
     `;
   }
 }
-
-customElements.define("app-bar", AppBar);
+customElements.define('app-bar', AppBar);

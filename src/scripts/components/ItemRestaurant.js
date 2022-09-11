@@ -4,7 +4,7 @@ class ItemRestaurant extends HTMLElement {
     this.render();
   }
   render() {
-    this.innerHTML = "";
+    this.innerHTML = '';
     this.innerHTML = `
     <div class="card menu-content">
           <img src="${this._restaurant.pictureId}" alt="${this._restaurant.name}" />
@@ -18,4 +18,4 @@ class ItemRestaurant extends HTMLElement {
      `;
   }
 }
-customElements.define("item-restaurant", ItemRestaurant);
+customElements.define('item-restaurant', ItemRestaurant);

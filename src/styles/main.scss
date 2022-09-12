@@ -19,29 +19,29 @@ $textColor: #fff;
   background-color: $themeColor;
   color: $textColor;
   z-index: 100;
-  :focus {
-    top: 0;
-  }
 }
+.skip-link:focus {
+  top: 0;
+}
+
 body {
   background-color: $bodyColor;
   font-family: 'Nunito', sans-serif;
 }
+
 .app-bar {
   padding: 12px 10%;
   color: $textColor;
   background-color: #d2001a;
   display: flex;
   justify-content: space-between;
-  position: sticky;
-  top: 0;
   box-shadow: -4px -3px 45px 21px rgba(15, 6, 6, 0.35);
 }
 #drawer {
-  padding: 4px 0;
-  ul li {
+  padding: auto;
+  li {
     display: inline;
-    margin: 0 8px;
+    margin: 4px 10px 0;
     a {
       color: $textColor;
       font-size: 18px;
@@ -51,14 +51,17 @@ body {
       background-color: $textColor;
       border: none;
       border-radius: 5px;
-      padding: 4px 0;
+      padding: 6px 0;
       font-weight: bold;
       color: $themeColorBlack;
     }
   }
 }
 #hamburger {
-  font-size: 20px;
+  font-size: 28px;
+  width: 44px;
+  height: 44px;
+  padding-left: 9px;
   text-decoration: none;
   color: $bodyColor;
   display: none;
@@ -196,21 +199,21 @@ footer {
     padding: 0 10px;
   }
   #drawer {
-    width: 120px;
-    height: 100px;
     padding: 10px;
+    width: 120px;
     position: absolute;
     top: 53px;
-    // right: 1px;
     transform: translate(-250px, 0);
     transition: transform 0.9s ease-in-out;
     background-color: $bodyColor;
     border-radius: 5px;
-    ul li {
-      margin-top: 4px;
+    li {
+      display: block;
+      padding: 6px 0;
       a {
         color: $themeColorBlack;
         font-size: 17px;
+        padding: 11px 2px;
       }
     }
   }

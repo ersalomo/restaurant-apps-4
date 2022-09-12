@@ -7,15 +7,16 @@ class AppBar extends HTMLElement {
     this.innerHTML = '';
     this.innerHTML = `
     <div class="app-bar">
+    <a id="hamburger" href="#">☰</a>
         <h2>Hunger Apps</h2>
         <nav class="navbar menu" id="drawer">
           <ul class="list-menu">
-            <li class="list-item"><a href="#">Home</a></li>
-            <li class="list-item"><a href="#content">Favorite</a></li>
+            <li class="list-item"><a href="/">Home</a></li>
+            <li class="list-item"><a href="#">Favorite</a></li>
             <li class="list-item"><a href="${AppBar.githubAccount}">About us</a></li>
           </ul>
         </nav>
-        <a id="hamburger" href="#">☰</a>
+        
     </div>
     `;
   }

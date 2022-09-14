@@ -37,26 +37,27 @@ body {
   justify-content: space-between;
   box-shadow: -4px -3px 45px 21px rgba(15, 6, 6, 0.35);
 }
+
 #drawer {
   padding: auto;
   li {
     display: inline;
     margin: 4px 10px 0;
     a {
-      color: $textColor;
-      font-size: 18px;
       text-decoration-line: none;
+      color: $textColor;
     }
     a:hover {
       background-color: $textColor;
       border: none;
       border-radius: 5px;
+      color: $themeColorBlack;
       padding: 6px 0;
       font-weight: bold;
-      color: $themeColorBlack;
     }
   }
 }
+
 #hamburger {
   font-size: 28px;
   width: 44px;

@@ -16,3 +16,7 @@ window.addEventListener('scroll', (e) => {
   drawerElement.classList.remove('open');
   e.stopPropagation();
 });
+drawerElement.querySelectorAll('.list-item a').forEach((elementA) => {
+  elementA.style.fontSize = '18px';
+  elementA.style.padding = '10px 2px';
+});

@@ -1,10 +1,11 @@
-const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const WorkBoxWebpackPlugin = require('workbox-webpack-plugin');
+const path = require('path');
 
 module.exports = {
   entry: {
-    app: path.resolve(__dirname, 'src/scripts/app.js'),
+    app: path.resolve(__dirname, 'src/scripts/index.js'),
     sw: path.resolve(__dirname, 'src/scripts/sw.js'),
   },
   output: {
@@ -15,16 +16,13 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.s[ac]ss$/i,
+        test: /\.css$/,
         use: [
           {
             loader: 'style-loader',
           },
           {
             loader: 'css-loader',
-          },
-          {
-            loader: 'sass-loader',
           },
         ],
       },
@@ -42,6 +40,9 @@ module.exports = {
           to: path.resolve(__dirname, 'dist/'),
         },
       ],
+    }),
+    new WorkBoxWebpackPlugin.GenerateSW({
+      swDest: './sw.bundle.js',
     }),
   ],
 };

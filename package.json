@@ -1,7 +1,7 @@
 {
   "name": "movie-catalogue",
   "version": "1.0.0",
-  "description": "Membuat PWA's menggunukan API dari tTheMovieDB di lms Dicoding",
+  "description": "Building architecture of PWA or PWA its self using, API from TheMovieDB in LMS Dicoding +62",
   "main": "index.js",
   "scripts": {
     "start-dev": "webpack serve --config webpack.dev.js",
@@ -13,11 +13,12 @@
   "keywords": [
     "PWA",
     "nodejs",
-    "Progressive Web Apps",
-    "Arsitecture Web Apps",
+    "Progressive Web App",
+    "Arsitecture of Web App",
     "Dicoding",
     "coding",
-    "JS"
+    "JS",
+    "stay coding"
   ],
   "author": "ersalomo2002@gmail.com",
   "license": "ISC",

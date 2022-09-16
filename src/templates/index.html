@@ -2,29 +2,34 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Restaurant Apps Starter Project</title>
+    <meta name="description" content="Free movie catalogue for you" />
+    <meta name="color-theme" content="#DB0000" />
+    <link rel="icon" href="src/public/favicon.jpeg" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+    <link rel="manifest" href="../public/app.webmanifest" />
+    <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
+    <script src="https://use.fontawesome.com/b070c8f1df.js"></script>
+    <title>Movie Catalogue</title>
   </head>
   <body>
-    <a href="#content" class="skip-link">Menuju ke konten</a>
     <header>
-      <app-bar></app-bar>
+      <div class="app-bar__menu">
+        <button id="hamburgerButton">☰</button>
+      </div>
+      <div class="app-bar__brand">
+        <h1>Movie Catalogue</h1>
+      </div>
+      <nav id="navigationDrawer" class="app-bar__navigation">
+        <ul>
+          <li><a href="#/now-playing">Now Playing</a></li>
+          <li><a href="#/upcoming">Upcoming</a></li>
+        </ul>
+      </nav>
     </header>
-
-    <div class="container" id="jumbotron"></div>
-    <main id="content">
-      <h2>Explore Restaurant</h2>
-      <list-item></list-item>
-    </main>
-
-    <footer class="footer">
-      <p class="footer copyright">
-        Copyright &copy;
-        <script>
-          document.writeln(new Date().getFullYear() + '-Hunger Apps');
-        </script>
-      </p>
+    <main id="mainContent"></main>
+    <footer>
+      <p>All data obtained from <a href="https://themoviedb.org" target="_blank" rel="noreferrer">TheMovieDB</a></p>
     </footer>
   </body>
 </html>

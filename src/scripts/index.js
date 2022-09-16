@@ -1,11 +1,20 @@
-// import "regenerator-runtime"; /* for async await transpile */
-import '../styles/main.scss';
-import data from '../DATA.json';
-import './components/AppBar.js';
-import './components/ListItem.js';
+import 'regenerator-runtime';
+import '../styles/style.css';
+import '../styles/responsive.css';
+import App from './views/app.js';
 
-export const load = () => {
-  const restaurants = data.restaurants;
-  const itemItemElement = document.querySelector('list-item');
-  itemItemElement.restaurants = restaurants;
-};
+import swRegister from './utils/sw-register.js';
+
+const app = new App({
+  button: document.querySelector('#hamburgerButton'),
+  drawer: document.querySelector('#navigationDrawer'),
+  content: document.querySelector('#mainContent'),
+});
+
+window.addEventListener('hashchange', (e) => {
+  app.renderPage();
+});
+window.addEventListener('load', (e) => {
+  app.renderPage();
+  swRegister();
+});

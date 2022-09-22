@@ -1,6 +1,6 @@
 import './ItemRestaurant.js';
-
-class ListItem extends HTMLElement {
+// import { Restaurant } from '../data/Restaurant.js';
+class ListItemRestaurant extends HTMLElement {
   set restaurants(restaurants) {
     this._restaurants = restaurants;
     this.render();
@@ -16,4 +16,4 @@ class ListItem extends HTMLElement {
   }
 }
 
-customElements.define('list-item', ListItem);
+customElements.define('list-item-restaurant', ListItemRestaurant);

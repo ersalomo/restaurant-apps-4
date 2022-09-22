@@ -1,11 +1,34 @@
-// import "regenerator-runtime"; /* for async await transpile */
+import 'regenerator-runtime'; /* for async await transpile */
 import '../styles/main.scss';
-import data from '../DATA.json';
 import './components/AppBar.js';
-import './components/ListItem.js';
+import { Restaurant } from '../scripts/data/Restaurant.js';
+import './components/ListItemRestaurant.js';
+import { App } from './views/app/App.js';
+import swRegister from './utils/sw-register.js';
 
 export const load = () => {
-  const restaurants = data.restaurants;
-  const itemItemElement = document.querySelector('list-item');
-  itemItemElement.restaurants = restaurants;
+  const app = new App({
+    button: document.querySelector('#hamburger'),
+    drawer: document.querySelector('#drawer'),
+    content: window,
+  });
+  window.addEventListener('hashchange', () => {
+    app.renderPage();
+  });
+
+  window.addEventListener('load', () => {
+    app.renderPage();
+    swRegister();
+  });
+
+  const listRestaurantElements = document.querySelector('list-item-restaurant');
+  const renderResult = async () => {
+    try {
+      listRestaurantElements.restaurants = await Restaurant.getRestaurants();
+    } catch (err) {
+      console.error(err);
+    }
+    // console.log(await Restaurant.getRestaurants());
+  };
+  renderResult();
 };

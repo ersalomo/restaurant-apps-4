@@ -15,7 +15,6 @@ export const load = () => {
   window.addEventListener('hashchange', () => {
     app.renderPage();
   });
-
   window.addEventListener('load', () => {
     app.renderPage();
     swRegister();
@@ -26,7 +25,7 @@ export const load = () => {
     try {
       listRestaurantElements.restaurants = await Restaurant.getRestaurants();
     } catch (err) {
-      console.error(err);
+      console.log(err);
     }
     // console.log(await Restaurant.getRestaurants());
   };

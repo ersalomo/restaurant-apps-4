@@ -11,7 +11,7 @@ class ItemRestaurant extends HTMLElement {
           <img src="${API_ENDPOINT.gambar(this._restaurant.pictureId, 'small')}" alt="${this._restaurant.name}" />
           <div class="card-body">
             <span class="ribbon">${this._restaurant.city}</span>
-            <span class="rating">Rating ${this._restaurant.rating}</span>
+            <span class="rating">Rating ⭐️${this._restaurant.rating}</span>
             <h5>${this._restaurant.name}</h5>
             <p>${this._restaurant.description.substring(0, 80)}...</p>
           </div>

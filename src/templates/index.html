@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="manifest" href="./app.webmanifest" />
+    <script src="https://use.fontawesome.com/b070c8f1df.js"></script>
+    <link rel="stylesheet" href="../styles/style.css" />
     <title>Restaurant Apps Starter Project</title>
   </head>
   <body>
@@ -16,8 +18,28 @@
     <div class="container" id="jumbotron"></div>
     <main id="content">
       <h2>Explore Restaurant</h2>
-      <list-item></list-item>
+      <list-item-restaurant></list-item-restaurant>
     </main>
+    <!-- detail -->
+    <div class="restaurant-item" id="detail-restaurant">
+      <h2 class="restaurant_title">Restorant Kamu</h2>
+      <img class="restaurant_poster" src="https://restaurant-api.dicoding.dev/images/small/12" alt="${movie.title}" />
+      <div class="restaurant_info">
+        <h3>Information</h3>
+        <h4>Tagline</h4>
+        <p>${movie.tagline}</p>
+        <h4>Release Date</h4>
+        <p>${movie.release_date}</p>
+        <h4>Duration</h4>
+        <p>${movie.runtime} minutes</p>
+        <h4>Rating</h4>
+        <p>${movie.vote_average}</p>
+      </div>
+      <div class="restaurant__overview">
+        <h3>Overview</h3>
+        <p>${movie.overview}</p>
+      </div>
+    </div>
 
     <footer class="footer">
       <p class="footer copyright">

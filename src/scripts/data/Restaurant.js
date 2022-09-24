@@ -6,11 +6,12 @@ export class Restaurant {
     const responseJson = await response.json();
     return responseJson.restaurants;
   }
-  static async getRestaurant(id) {
+  static async detailRestaurant(id) {
     const response = fetch(`${API_ENDPOINT.detail(id)}`);
-    const responseJson = await response.json();
-    return responseJson;
+    return response.json();
   }
+
   static async search() {}
+
   static async addReview({}) {}
 }

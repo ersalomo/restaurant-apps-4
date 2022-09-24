@@ -149,20 +149,21 @@ footer {
   background-color: #d2001a;
   justify-content: center;
 }
+
 /* detail restaurant */
 #detail-restaurant {
-  display: flex;
+  box-shadow: 0 8px 10px 0px rgba(63, 62, 62, 0.2);
+  margin: 0 auto;
+  width: 115vh;
 }
+
 #detail-restaurant .restaurant_poster {
-  padding: 10px;
-  /* display: inline; */
-  background-color: #bf1722;
   width: 100%;
-  max-width: 400px;
+  border-radius: 5px;
 }
 #detail-restaurant .restaurant_info {
-  display: inline;
 }
+
 @media (max-width: 950px) {
   body {
     background-color: #013dc9;
@@ -215,7 +216,6 @@ footer {
     font-size: 14px;
   }
 }
-
 @media screen and (max-width: 600px) {
   body {
     background-color: rgb(155, 30, 30);

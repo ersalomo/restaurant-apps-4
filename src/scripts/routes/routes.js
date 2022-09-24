@@ -1,4 +1,5 @@
 const routes = {
+  '/': '',
   '/list': '',
   '/detail/:id': '',
   '/search': '',

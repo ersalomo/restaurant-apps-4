@@ -10,14 +10,17 @@ export const load = () => {
   const app = new App({
     button: document.querySelector('#hamburger'),
     drawer: document.querySelector('#drawer'),
-    content: window,
+    objectWindow: window,
+    mainContent: document.querySelector('#content'),
   });
+
   window.addEventListener('hashchange', () => {
     app.renderPage();
   });
+
   window.addEventListener('load', () => {
     app.renderPage();
-    swRegister();
+    // swRegister();
   });
 
   const listRestaurantElements = document.querySelector('list-item-restaurant');
@@ -27,7 +30,6 @@ export const load = () => {
     } catch (err) {
       console.log(err);
     }
-    // console.log(await Restaurant.getRestaurants());
   };
   renderResult();
 };

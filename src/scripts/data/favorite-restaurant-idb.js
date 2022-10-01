@@ -10,7 +10,7 @@ const dbPromise = openDB(DATABASE_NAME, DATABASE_VERSION, {
 });
 const FavoriteRestaurantIdb = {
   async getRestaurants() {
-    return (await dbPromise).get(OBJECT_STORE_NAME);
+    return (await dbPromise).getAll(OBJECT_STORE_NAME);
   },
   async getRestaurant(id) {
     return (await dbPromise).get(OBJECT_STORE_NAME, id);

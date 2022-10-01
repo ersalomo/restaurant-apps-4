@@ -1,281 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap');
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-.skip-link {
-  position: absolute;
-  top: -40px;
-  left: 0;
-  padding: 8px;
-  background-color: #bf1722;
-  color: white;
-  z-index: 100;
-}
-.skip-link:focus {
-  top: 0;
-}
-
-body {
-  background-color: #efefef;
-  font-family: 'Nunito', sans-serif;
-}
-
-.app-bar {
-  padding: 12px 10%;
-  color: white;
-  background-color: #d2001a;
-  display: flex;
-  justify-content: space-between;
-  position: sticky;
-  top: 0;
-  box-shadow: -4px -3px 45px 21px rgba(15, 6, 6, 0.35);
-}
-#drawer {
-  padding: 4px 0;
-}
-#drawer ul li {
-  display: inline;
-  margin: 0 5px;
-}
-
-#drawer li a {
-  color: white;
-  font-size: 17px;
-  text-decoration-line: none;
-}
-
-#drawer li a:hover {
-  background-color: #fff;
-  border: none;
-  border-radius: 5px;
-  padding: 4px 0px;
-  font-weight: bold;
-  color: black;
-}
-#hamburger {
-  font-size: 20px;
-  text-decoration: none;
-  color: rgb(255, 255, 255);
-  display: none;
-}
-div#jumbotron {
-  margin-top: 0;
-  /* width: 100%; */
-  height: 420px;
-  background-image: url('../public/images/hero-image_2.jpg');
-  /* background-position: center; */
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-main {
-  padding: 0 10%;
-}
-main h2 {
-  padding: 20px 10vh;
-  text-align: center;
-  font-weight: bold;
-}
-/* menggunakna flex / grip () */
-/* ketika grid ditetapkan pada wrapper atau container,
-seluruh elemen yang berada di dalamnya secara langsung
-merupakan grid item. Namun, kita tidak melihat perubahannya
-karena kita belum mengatur akan seperti apa grid item ditampilkan. */
-
-*.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  gap: 15px;
-}
-/* item */
-*.wrapper .card {
-  box-shadow: 0 8px 10px 0px rgba(63, 62, 62, 0.2);
-}
-div.card.menu-content {
-  border: 1px solid rgb(255, 255, 255);
-  background-color: #ffde00;
-  border-radius: 8px;
-  position: relative;
-}
-div.card .card-body {
-  margin-top: -15px;
-  padding: 0 10px;
-  background-color: white;
-}
-div.card img {
-  width: 100%;
-  height: 250px;
-}
-div.card h5 {
-  font-weight: bold;
-  font-size: 20px;
-  margin: 8px 0;
-}
-div.card p {
-  text-align: justify;
-  padding-bottom: 8px;
-  text-indent: 12px;
-}
-
-div.card .ribbon {
-  position: absolute;
-  background-color: #ffde00;
-  padding: 5px 6px;
-  font-size: 16px;
-  top: 10px;
-  left: 4px;
-  border-radius: 5px;
-}
-
-div.card .rating {
-  border-radius: 5px;
-  border: none;
-  background-color: #000;
-  font-size: 15px;
-  font-weight: bold;
-  padding: 3px;
-  color: #fff;
-}
-
-footer {
-  margin-top: 10vh;
-  padding: 18px 0;
-  color: white;
-  display: flex;
-  background-color: #d2001a;
-  justify-content: center;
-}
-
-@media (max-width: 950px) {
-  body {
-    background-color: #013dc9;
-  }
-  main {
-    padding: 0 2%;
-  }
-  div.card img {
-    height: 200px;
-  }
-  /* div.card p {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 23rem;
-    max-height: 20rem;
-  } */
-}
-@media screen and (min-width: 600px) and (max-width: 900px) {
-  body {
-    background-color: rgb(5, 94, 39);
-  }
-  .app-bar {
-    padding: 12px 1%;
-  }
-  main {
-    padding: 0 4px;
-  }
-
-  #drawer li a {
-    color: white;
-    font-size: 15px;
-  }
-
-  *.wrapper {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: 15px;
-  }
-
-  div.card img {
-    /* width: 150px; */
-    height: 150px;
-  }
-  div.card h5 {
-    font-size: 16px;
-  }
-  div.card p {
-    font-size: 14px;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  body {
-    background-color: rgb(155, 30, 30);
-  }
-  .app-bar {
-    padding: 10px 4px;
-  }
-  main {
-    padding: 0 10px;
-  }
-  #drawer {
-    width: 120px;
-    height: 100px;
-    position: absolute;
-    top: 53px;
-    right: 1px;
-
-    /* menyembunyikan #drawer -250px (sesuai dengan ukuran lebar drawer) ke kiri */
-    transform: translate(130px, 0);
-    transition: transform 0.9s ease-in-out;
-    background-color: rgb(255, 255, 255);
-    border-radius: 5px;
-    display: none;
-  }
-  #drawer ul li {
-    margin: 8px 16px 0;
-  }
-  #drawer li a {
-    color: black;
-  }
-  #drawer.open {
-    transform: translate(0, 0);
-  }
-  #hamburger {
-    display: inline;
-  }
-  div#jumbotron {
-    height: 250px;
-  }
-  *.wrapper {
-    grid-template-columns: repeat(1, 0.99fr);
-    justify-content: center;
-  }
-  div.card.menu-content {
-    border: 1px solid rgb(255, 255, 255);
-    border-radius: 5px;
-    position: relative;
-  }
-  div.card img {
-    height: 170px;
-  }
-  div.card h5 {
-    font-size: 16px;
-  }
-  div.card p {
-    font-size: 13px;
-  }
-
-  div.card .ribbon {
-    width: 4rem;
-    padding: 4px 3px;
-    font-size: 14px;
-    text-align: center;
-  }
-
-  div.card .rating {
-    font-size: 12px;
-  }
-}
-
-sass
-
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 $bodyColor: #efefef;
 $themeColor: #d2001a;
 $themeColorCard: #ffde00;
@@ -296,46 +20,49 @@ $textColor: #fff;
   background-color: $themeColor;
   color: $textColor;
   z-index: 100;
-  :focus {
-    top: 0;
-  }
 }
+.skip-link:focus {
+  top: 0;
+}
+
 body {
   background-color: $bodyColor;
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
+
 .app-bar {
   padding: 12px 10%;
   color: $textColor;
   background-color: #d2001a;
   display: flex;
   justify-content: space-between;
-  position: sticky;
-  top: 0;
   box-shadow: -4px -3px 45px 21px rgba(15, 6, 6, 0.35);
 }
 #drawer {
-  padding: 4px 0;
-  ul li {
+  padding: auto;
+  li {
     display: inline;
-    margin: 0 5px;
+    margin: 4px 10px 0;
     a {
       color: $textColor;
-      font-size: 17px;
+      font-size: 18px;
       text-decoration-line: none;
     }
     a:hover {
       background-color: $textColor;
       border: none;
       border-radius: 5px;
-      padding: 4px 0px;
+      padding: 6px 0;
       font-weight: bold;
       color: $themeColorBlack;
     }
   }
 }
 #hamburger {
-  font-size: 20px;
+  font-size: 28px;
+  width: 44px;
+  height: 44px;
+  padding-left: 9px;
   text-decoration: none;
   color: $bodyColor;
   display: none;
@@ -353,6 +80,7 @@ main {
   h2 {
     padding: 20px 10vh;
     text-align: center;
+    font-size: 30px;
     font-weight: bold;
   }
 }
@@ -378,6 +106,7 @@ div.card {
     margin-top: -15px;
     padding: 0 10px;
     background-color: white;
+    border-radius: inherit;
   }
   img {
     width: 100%;
@@ -421,11 +150,21 @@ footer {
   background-color: $themeColor;
   justify-content: center;
 }
+/* detail restaurant */
+#detail-restaurant {
+  box-shadow: 0 8px 10px 0px rgba(36, 35, 35, 0.2);
+  margin: 50% auto;
+  background-color: chartreuse;
+  width: 100vh;
+  .restaurant_poster {
+    width: 100%;
+    border-radius: 5px;
+  }
+  .restaurant_info {
+  }
+}
 
 @media (max-width: 950px) {
-  body {
-    background-color: #013dc9;
-  }
   main {
     padding: 0 2%;
   }
@@ -435,9 +174,6 @@ footer {
 }
 
 @media screen and (min-width: 600px) and (max-width: 900px) {
-  body {
-    background-color: rgb(5, 94, 39);
-  }
   .app-bar {
     padding: 12px 1%;
   }
@@ -470,35 +206,32 @@ footer {
 }
 
 @media screen and (max-width: 600px) {
-  body {
-    background-color: rgb(155, 30, 30);
-  }
   .app-bar {
-    padding: 10px 4px;
+    padding: 10px 6px;
   }
   main {
     padding: 0 10px;
   }
   #drawer {
+    padding: 10px;
     width: 120px;
-    height: 100px;
     position: absolute;
     top: 53px;
-    right: 1px;
-    transform: translate(130px, 0);
+    transform: translate(-250px, 0);
     transition: transform 0.9s ease-in-out;
     background-color: $bodyColor;
     border-radius: 5px;
-    display: none;
-  }
-  #drawer {
-    ul li {
-      margin: 8px 16px 0;
+    li {
+      display: block;
+      padding: 6px 0;
       a {
         color: $themeColorBlack;
+        font-size: 17px;
+        padding: 11px 2px;
       }
     }
   }
+
   #drawer.open {
     transform: translate(0, 0);
   }

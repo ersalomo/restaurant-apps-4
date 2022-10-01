@@ -7,8 +7,9 @@ export class Restaurant {
     return responseJson.restaurants;
   }
   static async detailRestaurant(id) {
-    const response = fetch(`${API_ENDPOINT.detail(id)}`);
-    return response.json();
+    const response = await fetch(`${API_ENDPOINT.detail(id)}`);
+    const responseJson = await response.json();
+    return responseJson.restaurant;
   }
 
   static async search() {}

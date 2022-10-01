@@ -1,7 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const path = require('path');
-const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
+// const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -16,7 +16,8 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.s[ac]ss$/i,
+        // test: /\.s[ac]ss$/i,
+        test: /\.css$/i,
         use: [
           {
             loader: 'style-loader',
@@ -24,9 +25,9 @@ module.exports = {
           {
             loader: 'css-loader',
           },
-          {
-            loader: 'sass-loader',
-          },
+          // {
+          //   loader: 'sass-loader',
+          // },
         ],
       },
     ],

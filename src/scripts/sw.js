@@ -1,6 +1,6 @@
 import 'regenerator-runtime';
-import CacheHelper from '../scripts/utils/cache-helper.js';
 
+import CacheHelper from '../scripts/utils/cache-helper.js';
 const assetsToCache = [
   './',
   './icons/maskable_icon.png',

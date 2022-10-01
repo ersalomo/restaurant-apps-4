@@ -149,12 +149,12 @@ footer {
   background-color: #d2001a;
   justify-content: center;
 }
-
 /* detail restaurant */
 #detail-restaurant {
   box-shadow: 0 8px 10px 0px rgba(63, 62, 62, 0.2);
   margin: 0 auto;
-  width: 115vh;
+  background-color: chartreuse;
+  width: 90vh;
 }
 
 #detail-restaurant .restaurant_poster {
@@ -162,6 +162,20 @@ footer {
   border-radius: 5px;
 }
 #detail-restaurant .restaurant_info {
+}
+#detail-restaurant .restaurant-favorite button.btn {
+  background-color: #d2001a;
+  border-radius: 5px;
+  border: none;
+  font-weight: bold;
+  font-size: 16px;
+  color: #fff;
+  padding: 5px;
+  margin-top: 8px;
+}
+#detail-restaurant .restaurant-favorite button.btn:hover {
+  background-color: #a7091c;
+  cursor: pointer;
 }
 
 @media (max-width: 950px) {

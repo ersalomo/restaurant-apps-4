@@ -11,8 +11,5 @@ export class Restaurant {
     const responseJson = await response.json();
     return responseJson.restaurant;
   }
-
-  static async search() {}
-
   static async addReview({}) {}
 }

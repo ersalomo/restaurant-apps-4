@@ -11,7 +11,6 @@ const routes = {
   '/list': listItemRestaurant,
   '/favorite': likeRestaurant,
   '/detail/:id': detailRestaurant,
-  '/search': '',
 };
 
 export default routes;

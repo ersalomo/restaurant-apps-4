@@ -41,7 +41,10 @@ class DetailResource extends HTMLElement {
     </div>
     <div id="likeButtonContainer" class="button-container button-group">
     </div>
-
+    <div class="" id="menu-restaurant">
+    <div class="menu" id="menu-drinks"></div>
+    <div class="menu" id="menu-foods"></div>
+    </div>
     <div class="customers-review" id="review"></div>
     `;
 
@@ -57,9 +60,11 @@ class DetailResource extends HTMLElement {
       `;
       customerReviews.innerHTML += templateCustomerReview;
     }
+    const restaurantMenuFoods = document.querySelector('#menu-foods');
+    const restaurantMenuDrinks = document.querySelector('#menu-drinks');
 
-    console.log(menus.foods);
-    console.log(menus.drinks);
+    menus.foods.forEach((food) => (restaurantMenuFoods.innerHTML += `<p>${food.name}</p>`));
+    menus.drinks.forEach((drink) => (restaurantMenuDrinks.innerHTML += `<p>${drink.name}</p>`));
 
     LikedButtonInitiator.init({
       likedButtonContainer: document.querySelector('#likeButtonContainer'),

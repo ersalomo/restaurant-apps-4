@@ -1,7 +1,8 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
 const path = require('path');
-// const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -25,9 +26,6 @@ module.exports = {
           {
             loader: 'css-loader',
           },
-          // {
-          //   loader: 'sass-loader',
-          // },
         ],
       },
     ],
@@ -48,5 +46,6 @@ module.exports = {
     // new WorkboxWebpackPlugin.GenerateSW({
     //   swDest: './sw.bundle.js',
     // }),
+    new FaviconsWebpackPlugin('./src/public/favicon/restaurant.png'),
   ],
 };

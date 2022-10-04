@@ -140,6 +140,45 @@ div.card .rating {
   padding: 3px;
   color: #fff;
 }
+#menu-restaurant {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+}
+#menu-restaurant p {
+  font-size: 18px;
+  padding: 6px;
+  margin: 0 6px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 8px 10px 0px rgba(63, 62, 62, 0.2);
+  display: inline-block;
+}
+.customer-review {
+  box-shadow: 0 8px 10px 0px rgba(63, 62, 62, 0.2);
+  padding: 8px;
+  width: 80%;
+  margin: 8px auto 0;
+}
+
+.like {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #db0000;
+
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  border-radius: 50%;
+  border: 0;
+
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
 
 footer {
   margin-top: 10vh;
@@ -163,20 +202,6 @@ footer {
 }
 #detail-restaurant .restaurant_info {
 }
-#detail-restaurant .restaurant-favorite button.btn {
-  background-color: #d2001a;
-  border-radius: 5px;
-  border: none;
-  font-weight: bold;
-  font-size: 16px;
-  color: #fff;
-  padding: 5px;
-  margin-top: 8px;
-}
-#detail-restaurant .restaurant-favorite button.btn:hover {
-  background-color: #a7091c;
-  cursor: pointer;
-}
 
 @media (max-width: 950px) {
   body {
@@ -198,7 +223,7 @@ footer {
 }
 @media screen and (min-width: 600px) and (max-width: 900px) {
   body {
-    background-color: rgb(5, 94, 39);
+    /* background-color: rgb(5, 94, 39); */
   }
   .app-bar {
     padding: 12px 1%;

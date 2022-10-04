@@ -1,6 +1,5 @@
 import { Restaurant } from '../data/Restaurant.js';
 import UrlParser from '../routes/Url-parser.js';
-import { createLikeButtonTemplate, createLikedButtonTemplate } from '../../scripts/views/templates/template-creator.js';
 import LikedButtonInitiator from '../utils/like-button-initiator.js';
 class DetailResource extends HTMLElement {
   connectedCallback() {
@@ -36,27 +35,25 @@ class DetailResource extends HTMLElement {
       <p>${description}</p>
     </div>
 
-    <div class="restaurant-favorite ">
-    <button type="button" class="btn btn-primary">Tambah ke favorite</button>
-    </div>
-    <div id="likeButtonContainer" class="button-container button-group">
-    </div>
+    <div id="likeButtonContainer" class="button-container button-group"></div>
+
     <div class="" id="menu-restaurant">
     <div class="menu" id="menu-drinks"></div>
     <div class="menu" id="menu-foods"></div>
     </div>
-    <div class="customers-review" id="review"></div>
+    <div class="review" id="reviews-container"></div>
     `;
 
-    const customerReviews = document.querySelector('#review');
+    const customerReviews = document.querySelector('#reviews-container');
     const customers = await this._restaurant['customerReviews'];
     const menus = await this._restaurant['menus'];
     for (const { name, review, date } of customers) {
       const templateCustomerReview = `
+      <div class="customer-review">
       <h4>${name}</h4>
       <p>${review}</p>
       <p>${date}</p>
-      <hr>
+      </div>
       `;
       customerReviews.innerHTML += templateCustomerReview;
     }

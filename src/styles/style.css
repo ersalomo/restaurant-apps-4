@@ -39,7 +39,7 @@ body {
 }
 #drawer ul li {
   display: inline;
-  margin: 0 5px;
+  margin: 4px 10px 0;
 }
 
 #drawer li a {
@@ -57,7 +57,10 @@ body {
   color: black;
 }
 #hamburger {
-  font-size: 20px;
+  font-size: 28px;
+  width: 44px;
+  height: 44px;
+  padding-left: 9px;
   text-decoration: none;
   color: rgb(255, 255, 255);
   display: none;
@@ -157,7 +160,7 @@ div.card .rating {
 .customer-review {
   box-shadow: 0 8px 10px 0px rgba(63, 62, 62, 0.2);
   padding: 8px;
-  width: 80%;
+  width: 520px;
   margin: 8px auto 0;
 }
 
@@ -201,6 +204,103 @@ footer {
   border-radius: 5px;
 }
 #detail-restaurant .restaurant_info {
+}
+/*Loader*/
+#loader {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  margin: -75px 0 0 -75px;
+  border: 16px solid rgb(230, 224, 224);
+  border-radius: 50%;
+  border-top: 16px solid #e70523;
+  width: 100px;
+  height: 100px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* Add animation to "page content" */
+#content {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s;
+}
+@-webkit-keyframes animatebottom {
+  from {
+    bottom: -100px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0px;
+    opacity: 1;
+  }
+}
+@keyframes animatebottom {
+  from {
+    bottom: -100px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+#review-input {
+  width: 520px;
+  background-color: rgb(255, 40, 40);
+  margin: 10px auto;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+#review-input > h3 {
+  text-align: center;
+}
+.input-review {
+  border: none;
+  border-radius: 5px;
+  display: block;
+  font-size: 16px;
+  padding: 8px 4px;
+  font-weight: normal;
+  margin: 10px 0;
+  width: 99%;
+  background-color: rgb(238, 237, 237);
+  box-shadow: -4px -3px 45px 21px rgba(228, 228, 228, 0.35);
+}
+.input-review:focus {
+  border: none;
+}
+#send-review {
+  background-color: rgb(236, 206, 206);
+  padding: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+#send-review:hover {
+  background-color: rgb(247, 151, 151);
 }
 
 @media (max-width: 950px) {
@@ -322,5 +422,8 @@ footer {
 
   div.card .rating {
     font-size: 12px;
+  }
+  #review-input {
+    width: 400px;
   }
 }

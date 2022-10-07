@@ -42,6 +42,21 @@ class DetailResource extends HTMLElement {
     <div class="menu" id="menu-foods"></div>
     </div>
     <div class="review" id="reviews-container"></div>
+    <div class="" id="review-input">
+      <h3>Add New Review</h3>
+      <form id="form-review-customers">
+      <label for="name"
+        >Your name
+        <input type="text" name="name" class="form-control input-review" id="name" />
+      </label>
+      <label for="comment"
+        >Comment
+        <textarea name="comment" class="form-control input-review" cols="50" rows="3" id="comment"> </textarea>
+      </label>
+      <button class="btn btn-primary" id="send-review">Submit</button>
+      </form>
+    </div>
+  
     `;
 
     const customerReviews = document.querySelector('#reviews-container');

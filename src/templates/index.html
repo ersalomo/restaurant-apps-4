@@ -14,38 +14,74 @@
     <header>
       <app-bar></app-bar>
     </header>
-
     <div class="container" id="jumbotron"></div>
-    <main id="content">
+    <div id="loader" aria-label="pre-loader"></div>
+    <main id="content" tabindex="0">
       <h2>Explore Restaurant</h2>
-      <!-- <style>
-        #menu-restaurant {
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          grid-template-rows: 1fr;
-        }
-        #menu-restaurant p {
-          font-size: 18px;
-          padding: 6px;
-          max-width: 120px;
-          box-shadow: 0 8px 10px 0px rgba(63, 62, 62, 0.2);
-        }
-      </style> -->
-      <!-- <div class="" id="menu-restaurant">
-        <div class="menu" id="menu-drinks">
-          <p>jus jeruk</p>
-          <p>jus jeruk</p>
-          <p>jus jeruk</p>
-          <p>jus jeruk</p>
-        </div>
-        <div class="menu" id="menu-foods">
-          <p>oper ayam</p>
-          <p>oper ayam</p>
-          <p>oper ayam</p>
-          <p>oper ayam</p>
-        </div>
-      </div> -->
     </main>
+    <!-- <style>
+      #review-input {
+        width: 500px;
+        background-color: rgb(255, 40, 40);
+        margin: 0 auto;
+        padding: 10px 15px;
+        border-radius: 5px;
+      }
+      #review-input > h3 {
+        text-align: center;
+      }
+      .input-review {
+        border: none;
+        border-radius: 5px;
+        display: block;
+        font-size: 16px;
+        padding: 8px 4px;
+        font-weight: normal;
+        margin: 10px 0;
+        width: 99%;
+        background-color: rgb(238, 237, 237);
+        box-shadow: -4px -3px 45px 21px rgba(228, 228, 228, 0.35);
+      }
+      .input-review:focus {
+        border: none;
+      }
+      #send-review {
+        background-color: rgb(236, 206, 206);
+        padding: 6px;
+        font-size: 14px;
+        font-weight: bold;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+      }
+      #send-review:hover {
+        background-color: rgb(247, 151, 151);
+      }
+
+      @media (max-width: 600px) {
+        body {
+          background-color: red;
+        }
+        #review-input {
+          width: 400px;
+        }
+      }
+    </style>
+    <div class="" id="review-input">
+      <h3>Review Customers</h3>
+      <form id="form-review-customers">
+        <label for="name"
+          >Your name
+          <input type="text" name="name" class="form-control input-review" id="name" />
+        </label>
+        <label for="comment"
+          >Comment
+          <textarea name="comment" class="form-control input-review" cols="50" rows="3" id="comment"> </textarea>
+        </label>
+        <button class="btn btn-primary" id="send-review">Submit</button>
+      </form>
+    </div> -->
 
     <footer class="footer">
       <p class="footer copyright">

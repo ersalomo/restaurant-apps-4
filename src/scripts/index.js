@@ -13,11 +13,15 @@ export const load = () => {
   });
 
   window.addEventListener('hashchange', () => {
+    document.querySelector('#loader').style.display = 'block';
     app.renderPage();
+    document.querySelector('#loader').style.display = 'none';
   });
 
   window.addEventListener('load', () => {
+    document.querySelector('#loader').style.display = 'block';
     app.renderPage();
+    document.querySelector('#loader').style.display = 'none';
     swRegister();
   });
 };

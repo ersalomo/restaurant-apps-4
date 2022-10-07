@@ -7,7 +7,7 @@ class AppBar extends HTMLElement {
     this.innerHTML = '';
     this.innerHTML = `
     <div class="app-bar">
-    <a id="hamburger" href="#">☰</a>
+    <a id="hamburger" href="#" aria-label="hamburger-button">☰</a>
         <h2>Hunger Apps</h2>
         <nav class="navbar menu" id="drawer">
           <ul class="list-menu">

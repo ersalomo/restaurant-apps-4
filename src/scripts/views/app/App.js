@@ -26,5 +26,10 @@ export class App {
     this._mainContent.innerHTML = '';
     this._mainContent.appendChild(await page);
     await page.afterRender();
+    const skipLinkElem = document.querySelector('.skip-link');
+    skipLinkElem.addEventListener('click', (event) => {
+      event.preventDefault();
+      document.querySelector('#content').focus();
+    });
   }
 }

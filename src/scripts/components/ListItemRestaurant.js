@@ -21,6 +21,7 @@ class ListItemRestaurant extends HTMLElement {
   }
 
   async afterRender() {
+    this.innerHTML = '';
     this.restaurants = await Restaurant.getRestaurants();
     this._restaurants.forEach((restaurant) => {
       const itemRestaurantElement = document.createElement('item-restaurant');

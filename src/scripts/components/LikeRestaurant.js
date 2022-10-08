@@ -15,6 +15,7 @@ export class LikeRestaurant extends HTMLElement {
   }
 
   async afterRender() {
+    this.innerHTML = '';
     this._restaurants = await FavoriteRestaurantIdb.getRestaurants();
     this._restaurants.forEach((restaurant) => {
       const itemRestaurantElement = document.createElement('item-restaurant');

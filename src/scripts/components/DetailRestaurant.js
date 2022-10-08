@@ -14,13 +14,13 @@ class DetailResource extends HTMLElement {
   render() {
     this.setAttribute('id', 'detail-restaurant');
     this.setAttribute('class', 'restaurant-item');
-    this.innerHTML = '';
   }
 
   async afterRender() {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
     this.restaurant = await Restaurant.detailRestaurant(url.id);
     const { pictureId, name, city, rating, description } = this._restaurant;
+    this.innerHTML = '';
     this.innerHTML = `
     <div class="restaurant-header">
       <img class="restaurant_poster" src="https://restaurant-api.dicoding.dev/images/medium/${pictureId}" alt="" />

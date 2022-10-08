@@ -11,17 +11,20 @@ export const load = () => {
     objectWindow: window,
     mainContent: document.querySelector('#content'),
   });
-
   window.addEventListener('hashchange', () => {
     document.querySelector('#loader').style.display = 'block';
     app.renderPage();
-    document.querySelector('#loader').style.display = 'none';
+    loader();
   });
-
   window.addEventListener('load', () => {
     document.querySelector('#loader').style.display = 'block';
     app.renderPage();
-    document.querySelector('#loader').style.display = 'none';
+    loader();
     swRegister();
   });
+  function loader() {
+    setTimeout(() => {
+      document.querySelector('#loader').style.display = 'none';
+    }, 1000);
+  }
 };

@@ -3,6 +3,7 @@ const DrawerInitiator = {
     const hamburger = button.textContent;
     button.addEventListener('click', (event) => {
       this._toggleDrawer(event, drawer);
+      console.log('adada bang');
     });
 
     objectWindow.addEventListener('click', (e) => {

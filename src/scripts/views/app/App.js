@@ -22,10 +22,15 @@ export class App {
 
   async renderPage() {
     const url = UrlParser.parseActiveUrlWithCombiner();
-    const page = routes[url]; // get key with value
-    this._mainContent.innerHTML = '';
-    this._mainContent.appendChild(await page);
-    await page.afterRender();
+    try {
+      const page = routes[url]; // get key with value
+      this._mainContent.innerHTML = '';
+      this._mainContent.appendChild(await page);
+      await page.afterRender();
+    } catch (error) {
+      console.log(error);
+      this._mainContent.innerHTML = '<h1>Where am I?</h1>';
+    }
     const skipLinkElem = document.querySelector('.skip-link');
     skipLinkElem.addEventListener('click', (event) => {
       event.preventDefault();

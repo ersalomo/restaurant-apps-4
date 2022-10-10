@@ -75,15 +75,18 @@ div#jumbotron {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 main {
   padding: 0 10%;
   margin-top: 4%;
 }
+
 main h2 {
   padding: 20px 10vh;
   text-align: center;
   font-weight: bold;
 }
+
 /* menggunakna flex / grip () */
 /* ketika grid ditetapkan pada wrapper atau container,
 seluruh elemen yang berada di dalamnya secara langsung
@@ -97,15 +100,18 @@ karena kita belum mengatur akan seperti apa grid item ditampilkan. */
   gap: 15px;
 }
 /* item */
+
 *.wrapper .card {
   box-shadow: 0 8px 10px 0px rgba(63, 62, 62, 0.2);
 }
+
 div.card.menu-content {
   border: 1px solid rgb(255, 255, 255);
   background-color: #ffde00;
   border-radius: 8px;
   position: relative;
 }
+
 div.card .card-body {
   margin-top: -15px;
   padding: 0 10px;

@@ -12,12 +12,6 @@ class ListItemRestaurant extends HTMLElement {
 
   async render() {
     this.setAttribute('class', 'wrapper restaurant');
-    // this.innerHtml = '';
-    // this._restaurants.forEach((restaurant) => {
-    //   const itemRestaurantElement = document.createElement('item-restaurant');
-    //   itemRestaurantElement.restaurant = restaurant;
-    //   this.appendChild(itemRestaurantElement);
-    // });
   }
 
   async afterRender() {

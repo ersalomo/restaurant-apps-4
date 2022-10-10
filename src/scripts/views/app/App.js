@@ -28,13 +28,11 @@ export default class App {
       this._mainContent.innerHTML = '';
       this._mainContent.appendChild(await page);
       await page.afterRender();
-    } catch (error) {
+    } catch (err) {
       const errorPageElement = document.createElement('error-page');
-
       const body = document.querySelector('body');
       body.innerHTML = '';
       body.appendChild(errorPageElement);
-      console.log(error);
     }
     const skipLinkElem = document.querySelector('.skip-link');
     skipLinkElem.addEventListener('click', (event) => {

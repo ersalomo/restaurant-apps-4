@@ -4,25 +4,26 @@
 
 ### 1.Syarat
 
-Menerapkan integration test untuk fungsi menyukai dan batal menyukai restoran.
+- Menerapkan integration test untuk fungsi menyukai dan batal menyukai restoran.
 End to End Test
 
 ### 2.Syarat
 
-Menerapkan End to End Test dengan skenario:
+- Menerapkan End to End Test dengan skenario:
 Menyukai salah satu restoran.
 Batal menyukai restoran tersebut.
 Image Optimization
 
 ### 3.Syarat
 
-Melakukan kompresi terhadap gambar hero yang digunakan. Ukuran gambar harus di bawah 200kb.
-Menerapkan teknik image responsive pada gambar hero. Resolusi gambar pada layar seluler dan desktop harus berbeda.
-Menerapkan teknik lazy loading pada gambar daftar restoran yang ditampilkan.
+- Melakukan kompresi terhadap gambar hero yang digunakan. Ukuran gambar harus di bawah 200kb.
+- Menerapkan teknik image responsive pada gambar hero. Resolusi gambar pada layar seluler dan desktop harus berbeda.
+-Menerapkan teknik lazy loading pada gambar daftar restoran yang ditampilkan.
 Bundle Optimization
 
 ### 4.Syarat
 
-Memasang bundle analyzer pada proyek submission.
+- Memasang bundle analyzer pada proyek submission.
 Gunakan teknik Code Splitting untuk memisahkan vendor code dari kode asli yang Anda tuliskan.
-Pertahankan syarat yang ada pada submission sebelumnya. Seperti penerapan PWA, responsibilitas tampilan, aksesibilitas pada website dan sebagainya.
+
+- Pertahankan syarat yang ada pada submission sebelumnya. Seperti penerapan PWA, responsibilitas tampilan, aksesibilitas pada website dan sebagainya.

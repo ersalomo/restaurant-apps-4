@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="manifest" href="./app.webmanifest" />
     <link rel="shortcut icon" href="../../src/public/favicon/restaurant.png" type="image/x-icon" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous" />
+    <meta name="theme-color" content="#DB0000" />
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon-180x180.png" />
+    <meta name="wpa-restaurant" description="this apps is created with love and justice" />
     <title>Restaurant Apps Lite</title>
   </head>
   <body>
@@ -20,12 +22,12 @@
       <h2>Explore Restaurant</h2>
     </main>
     <footer class="footer">
-      <p class="footer copyright">
-        Copyright &copy;
-        <script>
-          document.writeln(new Date().getFullYear() + '-Hunger Apps');
-        </script>
-      </p>
+      <p class="footer copyright">Copyright &copy; <span id="name-app"></span></p>
     </footer>
   </body>
+  <script>
+    const nameApp = '-Hunger Apps';
+    const spanNameApp = document.getElementById('name-app');
+    spanNameApp.innerHTML = new Date().getFullYear() + nameApp;
+  </script>
 </html>

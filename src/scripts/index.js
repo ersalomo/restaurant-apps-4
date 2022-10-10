@@ -3,6 +3,8 @@ import '../styles/style.css';
 import './components/AppBar.js';
 import App from './views/app/App.js';
 import swRegister from './utils/sw-register.js';
+import 'lazysizes';
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 
 export const load = () => {
   const app = new App({

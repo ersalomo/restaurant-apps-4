@@ -1,5 +1,5 @@
 import './ItemRestaurant.js';
-import { Restaurant } from '../data/Restaurant.js';
+import Restaurant from '../data/Restaurant.js';
 class ListItemRestaurant extends HTMLElement {
   connectedCallback() {
     this.render();

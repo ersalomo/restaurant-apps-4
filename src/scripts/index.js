@@ -1,7 +1,7 @@
 import 'regenerator-runtime'; /* for async await transpile */
 import '../styles/style.css';
 import './components/AppBar.js';
-import { App } from './views/app/App.js';
+import App from './views/app/App.js';
 import swRegister from './utils/sw-register.js';
 
 export const load = () => {
@@ -12,19 +12,21 @@ export const load = () => {
     mainContent: document.querySelector('#content'),
   });
   window.addEventListener('hashchange', () => {
-    document.querySelector('#loader').style.display = 'block';
     app.renderPage();
     loader();
   });
   window.addEventListener('load', () => {
-    document.querySelector('#loader').style.display = 'block';
     app.renderPage();
     loader();
     swRegister();
   });
+
+  const loaderElement = document.querySelector('#loader');
   function loader() {
+    loaderElement.style.display = 'block';
+    const second = 1000;
     setTimeout(() => {
-      document.querySelector('#loader').style.display = 'none';
-    }, 1000);
+      loaderElement.style.display = 'none';
+    }, second);
   }
 };

@@ -1,7 +1,8 @@
 import DrawerInitiator from '../../utils/drawer-initiator.js';
 import UrlParser from '../../routes/Url-parser.js';
 import routes from '../../routes/routes.js';
-export class App {
+import '../pages/ErrorPage.js';
+export default class App {
   constructor({ button, drawer, objectWindow, mainContent }) {
     this._button = button;
     this._drawer = drawer;
@@ -28,8 +29,12 @@ export class App {
       this._mainContent.appendChild(await page);
       await page.afterRender();
     } catch (error) {
+      const errorPageElement = document.createElement('error-page');
+
+      const body = document.querySelector('body');
+      body.innerHTML = '';
+      body.appendChild(errorPageElement);
       console.log(error);
-      this._mainContent.innerHTML = '<h1>Where am I?</h1>';
     }
     const skipLinkElem = document.querySelector('.skip-link');
     skipLinkElem.addEventListener('click', (event) => {

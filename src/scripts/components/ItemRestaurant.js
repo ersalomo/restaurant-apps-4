@@ -17,7 +17,7 @@ class ItemRestaurant extends HTMLElement {
             <span class="ribbon">${city}</span>
             <span class="rating">Rating ⭐️${rating}</span>
             <h5><a href="#/detail/${id}">${name}</a> </h5>
-            <p>${description.substring(0, 80)}...</p>
+            <p>${description}</p>
           </div>
      </div>
      `;

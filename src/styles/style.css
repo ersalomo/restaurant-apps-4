@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap');
-
+/* @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
 * {
   padding: 0;
   margin: 0;
@@ -21,7 +21,7 @@
 
 body {
   background-color: #efefef;
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .app-bar {
@@ -44,8 +44,8 @@ body {
 
 #drawer li a {
   color: white;
-  font-size: 17px;
-  padding: 10px 2px;
+  font-size: 20px;
+  padding: 10px 1px;
   text-decoration-line: none;
 }
 
@@ -53,7 +53,7 @@ body {
   background-color: #fff;
   border: none;
   border-radius: 5px;
-  padding: 4px 0px;
+  padding: 4px 1px;
   font-weight: bold;
   color: black;
 }
@@ -122,8 +122,15 @@ div.card h5 {
 }
 div.card p {
   text-align: justify;
-  padding-bottom: 8px;
+  padding-bottom: 4px;
   text-indent: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* number of lines to show */
+  /* line-clamp: 1; */
+  -webkit-box-orient: vertical;
+  line-height: 1.4em;
 }
 
 div.card .ribbon {
@@ -204,7 +211,8 @@ footer {
   width: 100%;
   border-radius: 5px;
 }
-#detail-restaurant .restaurant_info {
+#detail-restaurant .restaurant_info p {
+  font-weight: normal;
 }
 /*Loader*/
 #loader {
@@ -277,10 +285,11 @@ footer {
 }
 .input-review {
   border: none;
+  font-family: 'Poppins', sans-serif;
   border-radius: 5px;
   display: block;
-  font-size: 16px;
-  padding: 8px 4px;
+  font-size: 20px;
+  padding: 10px 4px;
   font-weight: normal;
   margin: 10px 0;
   width: 99%;
@@ -292,40 +301,32 @@ footer {
 }
 #send-review {
   background-color: rgb(236, 206, 206);
-  padding: 6px;
-  font-size: 14px;
+  padding: 12px;
+  font-size: 18px;
   font-weight: bold;
   border-radius: 5px;
   border: none;
   cursor: pointer;
-  width: 100%;
+  width: 99%;
 }
 #send-review:hover {
   background-color: rgb(247, 151, 151);
 }
+#error-page {
+  display: flex;
+  justify-content: center;
+  margin: 120px 0;
+}
 
 @media (max-width: 950px) {
-  body {
-    background-color: #013dc9;
-  }
   main {
     padding: 0 2%;
   }
   div.card img {
     height: 200px;
   }
-  /* div.card p {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 23rem;
-    max-height: 20rem;
-  } */
 }
 @media screen and (min-width: 600px) and (max-width: 900px) {
-  body {
-    /* background-color: rgb(5, 94, 39); */
-  }
   .app-bar {
     padding: 12px 1%;
   }
@@ -335,7 +336,7 @@ footer {
 
   #drawer li a {
     color: white;
-    font-size: 15px;
+    font-size: 16px;
   }
 
   *.wrapper {
@@ -356,10 +357,12 @@ footer {
     font-size: 14px;
   }
 }
+#error-page {
+  display: flex;
+  justify-content: center;
+  margin: 120px 0;
+}
 @media screen and (max-width: 600px) {
-  body {
-    background-color: rgb(155, 30, 30);
-  }
   .app-bar {
     padding: 10px 6px;
   }
@@ -368,8 +371,8 @@ footer {
   }
   #drawer {
     padding: 10px;
-    width: 120px;
-    height: 100px;
+    width: 125px;
+    height: 138px;
     position: absolute;
     top: 53px;
     transform: translate(-250px, 0);
@@ -427,5 +430,9 @@ footer {
   }
   #review-input {
     width: 400px;
+  }
+  .customer-review,
+  #review-input {
+    width: 96%;
   }
 }

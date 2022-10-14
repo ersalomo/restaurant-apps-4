@@ -74,7 +74,7 @@ module.exports = {
     }),
     new FaviconsWebpackPlugin('./src/public/restaurant.png'),
     new ImageminWebpackPlugin({
-      plugin: [
+      plugins: [
         ImageminMozjpeg({
           quality: 50,
           pregressive: true,

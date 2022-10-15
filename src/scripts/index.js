@@ -1,25 +1,3 @@
-<<<<<<< HEAD
-import 'regenerator-runtime';
-import '../styles/style.css';
-import '../styles/responsive.css';
-import App from './views/app.js';
-
-import swRegister from './utils/sw-register.js';
-
-const app = new App({
-  button: document.querySelector('#hamburgerButton'),
-  drawer: document.querySelector('#navigationDrawer'),
-  content: document.querySelector('#mainContent'),
-});
-
-window.addEventListener('hashchange', (e) => {
-  app.renderPage();
-});
-window.addEventListener('load', (e) => {
-  app.renderPage();
-  swRegister();
-});
-=======
 import 'regenerator-runtime'; /* for async await transpile */
 import '../styles/style.css';
 import './components/AppBar.js';
@@ -54,4 +32,3 @@ export const load = () => {
     }, second);
   }
 };
->>>>>>> e9b283177f0ea83f08a3609a56d11a57c9bc1694

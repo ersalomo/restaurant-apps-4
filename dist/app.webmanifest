@@ -9,10 +9,10 @@
   "theme_color": "#000",
   "icons": [
     {
-      "src": "./icons/restaurant.png",
+      "src": "./icons/restaurant.webp",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any"
+      "purpose": "maskable"
     }
   ]
 }

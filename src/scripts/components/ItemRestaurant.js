@@ -16,7 +16,7 @@ class ItemRestaurant extends HTMLElement {
           <div class="card-body">
             <span class="ribbon">${city}</span>
             <span class="rating">Rating ⭐️${rating}</span>
-            <h5><a href="#/detail/${id}">${name}</a> </h5>
+            <h3><a href="#/detail/${id}">${name}</a> </h3>
             <p>${description}</p>
           </div>
      </div>

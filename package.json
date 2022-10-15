@@ -8,7 +8,7 @@
     "build": "webpack --config webpack.prod.js",
     "lint": "eslint ./src",
     "serve": "http-server dist",
-    "sharp": "node ./src/scripts/sharp.js",
+    "sharp": "node sharp/sharp.js",
     "test": "karma start"
   },
   "keywords": [
@@ -42,6 +42,7 @@
     "html-webpack-plugin": "^5.5.0",
     "http-server": "^14.1.1",
     "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-webp-webpack-plugin": "^3.3.6",
     "karma": "^6.4.1",
     "karma-chrome-launcher": "^3.1.1",
     "karma-cli": "^2.0.0",

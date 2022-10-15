@@ -3,7 +3,7 @@ name: Continuous Integration
 on:
   pull_request:
     branches:
-      - restaurant-final
+      - main
 
 jobs:
   test:
@@ -22,4 +22,3 @@ jobs:
       - name: Run Automated Test
         run: |
           npm install
-          npm run test

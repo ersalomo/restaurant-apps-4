@@ -1,0 +1,18 @@
+{
+  "id": "restaurants-lite-pwa-1",
+  "start_url": "./index.html",
+  "name": "Restaurants Lite",
+  "short_name": "Restaurants",
+  "description": "Restaurants recomendation",
+  "display": "standalone",
+  "background_color": "#FFF",
+  "theme_color": "#000",
+  "icons": [
+    {
+      "src": "./icons/restaurant.webp",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

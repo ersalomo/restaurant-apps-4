@@ -1,184 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  padding: 8px;
+  background-color: #bf1722;
+  color: white;
+  z-index: 100;
+}
+.skip-link:focus {
+  top: 0;
 }
 
 body {
+  background-color: #efefef;
   font-family: 'Poppins', sans-serif;
-  background-color: white;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
 }
-
-/*
-    AppBar
-  */
 
 .app-bar {
-  padding: 8px 16px;
-  background-color: white;
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  gap: 10px;
+  padding: 12px 10%;
+  color: white;
+  background-color: #d2001a;
+  display: flex;
+  justify-content: space-between;
   position: sticky;
   top: 0;
-  z-index: 99;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: -4px -3px 45px 21px rgba(15, 6, 6, 0.35);
+}
+#drawer {
+  padding: 4px 0;
+}
+#drawer ul li {
+  display: inline;
+  margin: 4px 10px 0;
 }
 
-.app-bar .app-bar__menu {
-  display: flex;
-  align-items: center;
+#drawer li a {
+  color: white;
+  font-size: 20px;
+  padding: 10px 1px;
+  text-decoration-line: none;
 }
 
-.app-bar .app-bar__menu button {
-  background-color: transparent;
+#drawer li a:hover {
+  background-color: #fff;
   border: none;
-  font-size: 18px;
-  padding: 8px;
-  cursor: pointer;
-}
-
-.app-bar .app-bar__brand {
-  display: flex;
-  align-items: center;
-}
-
-.app-bar .app-bar__brand h1 {
-  color: #db0000;
-  text-transform: uppercase;
-  font-size: 22px;
-  user-select: none;
-}
-
-.app-bar .app-bar__navigation {
-  position: absolute;
-  top: 50px;
-  left: -180px;
-  width: 150px;
-  transition: all 0.3s;
-  padding: 8px;
-  background-color: white;
-  overflow: hidden;
-}
-
-.app-bar .app-bar__navigation.open {
-  left: 0;
-}
-
-.app-bar .app-bar__navigation ul li a {
-  display: inline-block;
-  text-decoration: none;
+  border-radius: 5px;
+  padding: 4px 1px;
+  font-weight: bold;
   color: black;
-  padding: 8px;
-  margin-bottom: 5px;
-  width: 100%;
 }
-
-/*
-    Main Content
-  */
+#hamburger {
+  font-size: 28px;
+  width: 44px;
+  height: 44px;
+  padding-left: 9px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  display: none;
+}
+div#jumbotron {
+  margin-top: 0;
+  /* width: 100%; */
+  height: 420px;
+  background-image: url('../public/images/hero-image_2.jpg');
+  /* background-position: center; */
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 main {
-  padding: 32px;
-  flex: 1;
+  padding: 0 8%;
+  margin-top: 4%;
 }
 
-.content {
-  margin: 0 auto;
-  min-height: 100%;
+main h2 {
+  padding: 20px 10vh;
+  text-align: center;
+  font-weight: bold;
 }
 
-.content .content__heading {
-  font-weight: normal;
-}
+/* menggunakna flex / grip () */
+/* ketika grid ditetapkan pada wrapper atau container,
+seluruh elemen yang berada di dalamnya secara langsung
+merupakan grid item. Namun, kita tidak melihat perubahannya
+karena kita belum mengatur akan seperti apa grid item ditampilkan. */
 
-/*
-    Movies
-  */
-
-.movies {
+*.wrapper {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 16px;
-  margin: 32px 0;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 15px;
+}
+/* item */
+
+*.wrapper .card {
+  box-shadow: 0 8px 10px 0px rgba(63, 62, 62, 0.2);
 }
 
-/*
-    Movie Item
-  */
-
-.movie-item {
-  width: 100%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+div.card.menu-content {
+  border: 1px solid rgb(255, 255, 255);
+  background-color: #ffde00;
   border-radius: 8px;
-  overflow: hidden;
-}
-
-.movie-item__header {
   position: relative;
+  background-color: aquamarine;
 }
 
-.movie-item .movie-item__header .movie-item__header__poster {
+div.card .card-body {
+  margin-top: -15px;
+  padding: 0 10px;
+  background-color: white;
+}
+div.card img {
   width: 100%;
+  height: 240px;
 }
-
-.movie-item .movie-item__header .movie-item__header__rating {
-  position: absolute;
-  padding: 8px;
-  bottom: 20px;
-  left: 0;
-  display: inline-block;
-  background-color: black;
-  color: white;
+div.card h3 {
+  font-weight: bold;
+  font-size: 20px;
+  margin: 8px 0;
 }
-
-.movie-item .movie-item__header .movie-item__header__rating .movie-item__header__rating__score {
-  margin-left: 10px;
-}
-
-.movie-item .movie-item__content {
-  padding: 16px;
-}
-
-.movie-item .movie-item__content h3 {
-  margin: 0 0 10px 0;
-}
-
-.movie-item .movie-item__content h3 a {
-  color: #db0000;
-  text-decoration: none;
-}
-
-.movie-item .movie-item__content p {
+div.card p {
+  text-align: justify;
+  padding-bottom: 4px;
+  font-size: 14px;
+  font-style: normal;
+  text-indent: 12px;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 4; /* number of lines to show */
+  -webkit-line-clamp: 3; /* number of lines to show */
+  /* line-clamp: 1; */
   -webkit-box-orient: vertical;
+  line-height: 1.4em;
 }
 
-/*
-    Movie
-  */
+div.card .ribbon {
+  position: absolute;
+  background-color: #ffde00;
+  padding: 5px 6px;
+  font-size: 16px;
+  top: 10px;
+  left: 4px;
+  border-radius: 5px;
+}
 
-.movie {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 800px;
+div.card .rating {
+  border-radius: 5px;
+  border: none;
+  background-color: #000;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 3px;
+  color: #fff;
+}
+#menu-restaurant {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 18px 16px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
 }
-
-.movie .movie__poster {
-  width: 100%;
-  max-width: 400px;
+#menu-restaurant p {
+  font-size: 18px;
+  padding: 6px;
+  margin: 0 6px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 8px 10px 0px rgba(63, 62, 62, 0.2);
+  display: inline-block;
 }
-
-.movie .movie__info h4 {
-  margin: 8px 0;
+.customer-review {
+  box-shadow: 0 8px 10px 0px rgba(63, 62, 62, 0.2);
+  padding: 8px;
+  width: 520px;
+  margin: 8px auto 0;
 }
 
 .like {
@@ -188,9 +188,8 @@ main {
   align-items: center;
   justify-content: center;
   background-color: #db0000;
-
   position: fixed;
-  bottom: 16px;
+  bottom: 18px;
   right: 16px;
   border-radius: 50%;
   border: 0;
@@ -200,20 +199,248 @@ main {
   cursor: pointer;
 }
 
-/*
-    Footer
-  */
-
 footer {
-  padding: 16px;
+  margin-top: 10vh;
+  padding: 18px 0;
+  color: white;
+  display: flex;
+  background-color: #d2001a;
+  justify-content: center;
+}
+/* detail restaurant */
+#detail-restaurant {
+  box-shadow: 0 8px 10px 0px rgba(63, 62, 62, 0.2);
+  margin: 0 auto;
+  background-color: chartreuse;
+  width: 90vh;
 }
 
-footer p {
+#detail-restaurant .restaurant_poster {
+  width: 100%;
+  border-radius: 5px;
+}
+#detail-restaurant .restaurant_info p {
+  font-weight: normal;
+}
+/*Loader*/
+#loader {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  margin: -75px 0 0 -75px;
+  border: 16px solid rgb(230, 224, 224);
+  border-radius: 50%;
+  border-top: 16px solid #e70523;
+  width: 100px;
+  height: 100px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* Add animation to "page content" */
+#content {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s;
+}
+@-webkit-keyframes animatebottom {
+  from {
+    bottom: -100px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0px;
+    opacity: 1;
+  }
+}
+@keyframes animatebottom {
+  from {
+    bottom: -100px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+#review-input {
+  width: 520px;
+  background-color: rgb(255, 40, 40);
+  margin: 10px auto;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+#review-input > h3 {
   text-align: center;
-  color: #aaaaaa;
+}
+.input-review {
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 5px;
+  display: block;
+  font-size: 20px;
+  padding: 10px 4px;
+  font-weight: normal;
+  margin: 10px 0;
+  width: 99%;
+  background-color: rgb(238, 237, 237);
+  box-shadow: -4px -3px 45px 21px rgba(228, 228, 228, 0.35);
+}
+.input-review:focus {
+  border: none;
+}
+#send-review {
+  background-color: rgb(236, 206, 206);
+  padding: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  width: 99%;
+}
+#send-review:hover {
+  background-color: rgb(247, 151, 151);
+}
+#error-page {
+  display: flex;
+  justify-content: center;
+  margin: 120px 0;
 }
 
-footer p a {
-  color: #db0000;
-  text-decoration: none;
+@media (max-width: 950px) {
+  main {
+    padding: 0 2%;
+  }
+  div.card img {
+    height: 200px;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  .app-bar {
+    padding: 12px 1%;
+  }
+  main {
+    padding: 0 4px;
+  }
+
+  #drawer li a {
+    color: white;
+    font-size: 16px;
+  }
+
+  *.wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 15px;
+  }
+
+  div.card img {
+    /* width: 150px; */
+    height: 150px;
+  }
+  div.card h5 {
+    font-size: 16px;
+  }
+  div.card p {
+    font-size: 14px;
+  }
+}
+#error-page {
+  display: flex;
+  justify-content: center;
+  margin: 120px 0;
+}
+@media screen and (max-width: 600px) {
+  .app-bar {
+    padding: 10px 6px;
+  }
+  main {
+    padding: 0 10px;
+  }
+  #drawer {
+    padding: 10px;
+    width: 125px;
+    height: 138px;
+    position: absolute;
+    top: 53px;
+    transform: translate(-250px, 0);
+    transition: transform 0.9s ease-in-out;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    display: block;
+  }
+  #drawer ul li {
+    display: block;
+    padding: 6px 0;
+  }
+  #drawer li a {
+    color: black;
+    font-size: 17px;
+    padding: 11px 2px;
+  }
+  #drawer.open {
+    transform: translate(0, 0);
+  }
+  #hamburger {
+    display: inline;
+  }
+  div#jumbotron {
+    height: 250px;
+  }
+  *.wrapper {
+    grid-template-columns: repeat(1, 0.99fr);
+    justify-content: center;
+  }
+  div.card.menu-content {
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    position: relative;
+  }
+  div.card img {
+    height: 170px;
+  }
+  div.card h5 {
+    font-size: 16px;
+  }
+  div.card p {
+    font-size: 13px;
+  }
+
+  div.card .ribbon {
+    width: 4rem;
+    padding: 4px 3px;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  div.card .rating {
+    font-size: 12px;
+  }
+  #review-input {
+    width: 400px;
+  }
+  .customer-review,
+  #review-input {
+    width: 96%;
+  }
 }

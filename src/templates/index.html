@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+<<<<<<< HEAD
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Free movie catalogue for you" />
     <meta name="color-theme" content="#DB0000" />
@@ -11,6 +12,16 @@
     <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
     <script src="https://use.fontawesome.com/b070c8f1df.js"></script>
     <title>Movie Catalogue</title>
+=======
+    <meta name="description" content="this apps is created with love and justice" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="manifest" href="./app.webmanifest" />
+    <link rel="shortcut icon" href="../../src/public/favicon/restaurant.png" type="image/x-icon" />
+    <meta name="theme-color" content="#DB0000" />
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon-180x180.png" />
+    <title>Restaurant Apps Lite</title>
+>>>>>>> e9b283177f0ea83f08a3609a56d11a57c9bc1694
   </head>
   <body>
     <header>
@@ -27,9 +38,28 @@
         </ul>
       </nav>
     </header>
+<<<<<<< HEAD
     <main id="mainContent"></main>
     <footer>
       <p>All data obtained from <a href="https://themoviedb.org" target="_blank" rel="noreferrer">TheMovieDB</a></p>
+=======
+    <div class="container" id="jumbotron">
+      <picture>
+        <source media="(max-width: 600px)" srcset="./images/dirt-rally-20-small.jpg" />
+      </picture>
+    </div>
+    <div id="loader" aria-label="pre-loader"></div>
+    <main id="content" tabindex="0">
+      <h2>Explore Restaurant</h2>
+    </main>
+    <footer class="footer">
+      <p class="footer copyright">Copyright &copy; <span id="name-app"></span></p>
+>>>>>>> e9b283177f0ea83f08a3609a56d11a57c9bc1694
     </footer>
   </body>
+  <script>
+    const nameApp = '-Hunger Apps';
+    const spanNameApp = document.getElementById('name-app');
+    spanNameApp.innerHTML = new Date().getFullYear() + nameApp;
+  </script>
 </html>

@@ -1,9 +1,6 @@
 name: Continuous Integration
 
-on:
-  push:
-    branches:
-      - restaurant-final
+on: [push]
 
 jobs:
   test:

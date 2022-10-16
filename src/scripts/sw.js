@@ -31,7 +31,7 @@ const assetsToCache = [
   './mstile-150x150.webp',
   './mstile-310x150.webp',
   './mstile-310x310.webp',
-  'yandex-browser-50x50.webp',
+  './yandex-browser-50x50.webp',
   './favicon.ico',
   './app.bundle.js',
   './app.webmanifest',

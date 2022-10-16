@@ -1,8 +1,9 @@
 import Restaurant from '../data/Restaurant.js';
 import UrlParser from '../routes/Url-parser.js';
-import LikedButtonInitiator from '../utils/like-button-initiator.js';
+import LikeButtonPresenter from '../utils/like-button-presenter.js';
 import { createInputReviewTemplate } from '../views/templates/template-creator.js';
 import API_ENDPOINT from '../globals/api-endpoint.js';
+import FavoriteRestaurantIdb from '../../scripts/data/favorite-restaurant-idb.js';
 class DetailResource extends HTMLElement {
   connectedCallback() {
     this.render();
@@ -84,8 +85,9 @@ class DetailResource extends HTMLElement {
     menus.foods.forEach((food) => (restaurantMenuFoods.innerHTML += `<p>${food.name}</p>`));
     menus.drinks.forEach((drink) => (restaurantMenuDrinks.innerHTML += `<p>${drink.name}</p>`));
 
-    LikedButtonInitiator.init({
+    LikeButtonPresenter.init({
       likedButtonContainer: document.querySelector('#likeButtonContainer'),
+      favoriteRestaurants: FavoriteRestaurantIdb,
       restaurant: this._restaurant,
     });
   }

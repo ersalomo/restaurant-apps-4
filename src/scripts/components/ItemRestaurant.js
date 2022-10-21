@@ -12,7 +12,7 @@ class ItemRestaurant extends HTMLElement {
     const { id, pictureId, name, city, rating, description } = this._restaurant;
     this.innerHTML = `
     <div class="card menu-content">
-          <img class="lazyload" src="${API_ENDPOINT.gambar(pictureId, 'small')}" alt="${name}" />
+          <img class="lazyload" data-src="${API_ENDPOINT.gambar(pictureId, 'small')}" alt="${name}" />
           <div class="card-body">
             <span class="ribbon">${city}</span>
             <span class="rating">Rating ⭐️${rating}</span>

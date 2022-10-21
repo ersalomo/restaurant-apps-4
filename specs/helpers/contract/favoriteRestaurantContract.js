@@ -2,7 +2,7 @@ const itActsAsFavoriteMovieModel = (favoriteMovie) => {
   const restaurantIdsOne = 'rqdv5juczeskfw1e867';
   const restaurantIdsTwo = 's1knt6za9kkfw1e867';
   const restaurantIdsThree = 'w9pga3s2tubkfw1e867';
-  
+
   it('should return the movie that has been added', async () => {
     favoriteMovie.putRestaurant({ id: restaurantIdsOne });
     favoriteMovie.putRestaurant({ id: restaurantIdsTwo });

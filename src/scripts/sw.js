@@ -12,6 +12,7 @@ const assetsToCache = [
   './assets/android-chrome-256x256.webp',
   './assets/android-chrome-384x384.webp',
   './assets/android-chrome-512x512.webp',
+  './assets/android-chrome-512x512.webp',
   './assets/apple-touch-icon-57x57.webp',
   './assets/apple-touch-icon-60x60.webp',
   './assets/apple-touch-icon-72x72.webp',

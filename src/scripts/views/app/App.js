@@ -19,8 +19,6 @@ export default class App {
     });
   }
 
-  // render url yang aktif
-
   async renderPage() {
     const url = UrlParser.parseActiveUrlWithCombiner();
     try {

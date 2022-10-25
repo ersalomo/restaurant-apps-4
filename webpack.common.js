@@ -7,11 +7,12 @@ const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default;
 const ImageminMozjpeg = require('imagemin-mozjpeg');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = {
   entry: {
     app: path.resolve(__dirname, 'src/scripts/app.js'),
-    // sw: path.resolve(__dirname, 'src/scripts/sw.js'),
   },
   output: {
     filename: '[name].bundle.js',
@@ -44,6 +45,7 @@ module.exports = {
       maxInitialRequests: 30,
       automaticNameDelimiter: '~',
       enforceSizeThreshold: 50000,
+
       cacheGroups: {
         defaultVendors: {
           test: /[\\/]node_modules[\\/]/,
@@ -57,7 +59,13 @@ module.exports = {
       },
     },
   },
+  performance: {
+    maxAssetSize: 42100,
+    maxEntrypointSize: 42100,
+  },
   plugins: [
+    new webpack.ProgressPlugin(),
+    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: path.resolve(__dirname, 'src/templates/index.html'),
@@ -76,11 +84,16 @@ module.exports = {
     new WorkboxWebpackPlugin.GenerateSW({
       swDest: './sw.bundle.js',
     }),
-    new FaviconsWebpackPlugin('./src/public/restaurant.png'),
+    new FaviconsWebpackPlugin({
+      logo: './src/public/restaurant.png',
+      mode: 'webapp',
+      devMode: 'webapp',
+      manifest: './src/public/app.webmanifest',
+    }),
     new ImageminWebpackPlugin({
       plugins: [
         ImageminMozjpeg({
-          quality: 50,
+          quality: 40,
           pregressive: true,
         }),
       ],
@@ -90,7 +103,7 @@ module.exports = {
         {
           test: /\.(jpe?g|png)/,
           options: {
-            quality: 50,
+            quality: 40,
           },
         },
       ],
